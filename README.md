@@ -1,1 +1,1 @@
-# Google Apps Item Segmentation and Content Based Recommended System
+# Google Apps Item Segmentation and Recommended System
