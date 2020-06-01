@@ -11,16 +11,16 @@
 
   <title>Project Dashboard</title>
 
+
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="../static/css/sb-admin-2.min.css" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  
 
 </head>
 
@@ -155,35 +155,32 @@
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            
-          </div>
+             </div>
 
           <!-- Content Row -->
           <div class="row justify-content-center">
           
               
-              <h3>Google Apps Item Segmentation</h3>
+              <h3>Google Apps Recommendation</h3>
               <br>
               <br>
           
-              <div class="form-row" style="width: 750px">
-                <!-- Categorical Input -->
+                <!-- Form -->
                 <div>
-                  <b>Rating: </b> {{Rating}}<br>
-                <b>Review: </b> {{Review}}<br>
-                <b>Size: </b> {{Size}}<br>
-                <b>Installs: </b> {{Installs}}<br>
-                <b>Price: </b> {{Price}}<br>
-                <b>Last Updated(days ago) </b> {{Last_Updated}}<br>
-                
-                <br>
-                Analysist Result:
-                {{prediction}}
-                <br>
-                <a href="/" target="_self">
-                    <button>Analyze Again</button>
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="POST" action="http://localhost:4000/item_recommendation">
+                        <div class="input-group">
+                          <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." name="search" aria-label="Search" aria-describedby="basic-addon2">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
                 </div>
-              </div>
+                <!-- Categorical Input -->
+            
+          
         </div>
         <!-- /.container-fluid -->
 
@@ -212,6 +209,7 @@
   </a>
 
   
+
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -221,14 +219,6 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
-
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-
 </body>
 
 </html>
